@@ -1,12 +1,12 @@
-const RangeInput = () => {
+const RangeInput = ({ name, min, max, value, onChange }) => {
 	return (
 		<form>
-			<div className="form-group mr-4">
-				<label htmlFor="formControlRange ">Цена</label>
-				<input type="range" className="form-control-range" id="priceRange" min="1" max="100" onChange={({ target }) => console.log(target)} />
+			<div className="form-group mr-4" style={{ width: "70%" }}>
+				<label htmlFor="formControlRange ">{name}</label>
+				<input type="range" className="form-control-range" id="priceRange" min="0" max="10" value={value} onChange={onChange} />
 				<div className="d-flex justify-content-between" style={{ lineHeight: 0 }}>
-					<span>0</span>
-					<span>100</span>
+					<span>{min}</span>
+					<span>{max}</span>
 				</div>
 			</div>
 		</form>

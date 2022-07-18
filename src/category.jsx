@@ -2,7 +2,7 @@ const Category = ({ data, onClick }) => {
 	return (
 		<li className="recent-post-list">
 			<div className="post-content">
-				<span style={{ cursor: "pointer" }} className=" post-link" onClick={onClick}>
+				<span type="button" className=" post-link" onClick={onClick}>
 					{data.name}
 				</span>
 			</div>
